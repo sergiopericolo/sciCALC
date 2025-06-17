@@ -1,2 +1,6 @@
-# Ignora file .DS_Store creati da macOS
+# macOS
 .DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml

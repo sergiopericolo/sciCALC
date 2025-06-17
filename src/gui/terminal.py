@@ -9,24 +9,14 @@ class TerminalGui(tk.Tk):
         self.text_output = tk.Text(self, state='disabled', bg='black', fg='white', insertbackground='white')
         self.text_output.pack(fill=tk.BOTH, expand=True)
 
-        # Casella per i numeri
-        self.number_input = tk.Entry(self, bg='black', fg='white', insertbackground='white')
-        self.number_input.pack(fill=tk.X)
-        self.number_input.bind('<Return>', self.processa_input_numeric)
-
-        # Casella per le funzioni
-        self.function_input = tk.Entry(self, bg='black', fg='white', insertbackground='white')
-        self.function_input.pack(fill=tk.X)
-        self.function_input.bind('<Return>', self.processa_input_function)
-
-        # Casella per i comandi
+        # input for command line
         self.command_input = tk.Entry(self, bg='black', fg='white', insertbackground='white')
         self.command_input.pack(fill=tk.X)
         self.command_input.bind('<Return>', self.processa_input_command)
 
-        self.variables = {}  # Dizionario per le variabili
+        self.variables = {}
 
-        self.scrivi_output("sciCALC. Type ';exit' per uscire.\n- ")
+        self.scrivi_output("\n - ")
 
 
     def scrivi_output(self, testo):
